@@ -1,13 +1,59 @@
-#Modal {
-  width: 60%;
-  height: 150px;
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
-  max-width: 960px;
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    bottom: 0;
 
-  border-radius: 8px;
-  background-color: white;
-  color: black;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+    width: 100%; /* Could be more or less, depending on screen size */
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: black;
+    text-align: center;
+
+    @media (min-width: 993px)
+    {
+      width: 100%;
+    }
+    .description {
+      margin-bottom: 25px;
+    }
+
+    #modal-container {
+      width: 95% ;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (min-width: 993px)
+      {
+        width: 30% ;
+      }
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
