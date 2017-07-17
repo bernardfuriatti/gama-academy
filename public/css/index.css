@@ -2,42 +2,93 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900");
 body {
   background-color: black;
-  margin: 0;
-  padding: 0; }
+  color: white;
+  font-family: 'Lato', sans-serif; }
+
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100vw;
+  background-color: black; }
 
 #MainContainer {
   width: 100vw;
+  max-width: 100vw;
   height: 100vh;
+  position: relative;
   background-image: url("../images/woman-background-2.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   background-position: left;
   background-origin: content-box;
-  color: white;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
+  color: white; }
   @media (min-width: 993px) {
     #MainContainer {
       width: 80%;
       margin-left: auto;
       margin-right: auto; } }
+  #MainContainer #MainOverlay {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: colorchange 10s infinite;
+    -webkit-animation: colorchange 10s infinite; }
+@keyframes colorchange {
+  0% {
+    background: transparent; }
+  50% {
+    background: #82c31f; }
+  100% {
+    background: transparent; } }
   #MainContainer #MainContent {
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%; }
+    @media (min-width: 993px) {
+      #MainContainer #MainContent {
+        width: 50%; }
+        #MainContainer #MainContent h2 {
+          margin-bottom: 10px; } }
     #MainContainer #MainContent h2 {
       font-family: 'Dosis', sans-serif;
+      font-weight: 300;
       font-size: 2.5rem;
       letter-spacing: 5px;
       text-transform: uppercase; }
     #MainContainer #MainContent p {
-      font-family: 'Lato', sans-serif;
-      margin: 0;
-      margin-right: 40px;
+      padding-right: 60px;
       color: #969696; }
+    #MainContainer #MainContent #MainOptions {
+      display: flex; }
+      #MainContainer #MainContent #MainOptions #MainButtonMore {
+        width: auto;
+        margin-top: 10px;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: transparent;
+        border-radius: 32px;
+        border: 1px solid #82c31f;
+        font-family: 'Dosis', sans-serif;
+        letter-spacing: 2px;
+        font-size: 12px;
+        color: #82c31f;
+        text-transform: uppercase;
+        font-weight: 600; }
+        #MainContainer #MainContent #MainOptions #MainButtonMore:hover {
+          background-color: #82c31f;
+          border: 1px solid #82c31f;
+          color: white; }
+        #MainContainer #MainContent #MainOptions #MainButtonMore #MainButtonIcon {
+          margin-right: 10px; }
 
 /*# sourceMappingURL=index.css.map */

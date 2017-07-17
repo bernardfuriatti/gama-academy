@@ -1,16 +1,26 @@
 body {
   background-color: $body-bg-color;
-  margin: 0;
-  padding: 0;
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100vw;
+  background-color: black;
 }
 
 #MainContainer {
   width: 100vw;
+  max-width: 100vw;
   height: 100vh;
+
+  position: relative;
 
   @media (min-width: 993px)
   {
-    width: 80%;
+    width: 80%; // era 80%
     margin-left: auto;
     margin-right: auto;
   }
@@ -24,9 +34,26 @@ body {
 
   color: $main-text-color;
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  #MainOverlay {
+    width: 100%;
+    height: 100%;
+
+    mix-blend-mode: multiply;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    animation: colorchange 10s infinite;
+    -webkit-animation: colorchange 10s infinite;
+    @keyframes colorchange
+    {
+      0%   {background: transparent;}
+      50% {background: $gama-color;}
+      100%   {background: transparent;}
+
+    }
+  }
 
   #MainContent {
     width: 50%;
@@ -36,18 +63,66 @@ body {
     flex-direction: column;
     justify-content: center;
 
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    @media (min-width: 993px)
+    {
+      width: 50%;
+
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+
     h2 {
       font-family: 'Dosis', sans-serif;
+      font-weight: 300;
       font-size: 2.5rem;
       letter-spacing: 5px;
       text-transform: uppercase;
     }
 
     p {
-      font-family: 'Lato', sans-serif;
-      margin: 0;
-      margin-right: 40px;
+      padding-right: 60px;
       color: #969696;
+    }
+
+    #MainOptions {
+      display: flex;
+
+      #MainButtonMore {
+        width: auto;
+
+        margin-top: 10px;
+
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        background-color: transparent;
+        border-radius: 32px;
+        border: 1px solid $gama-color;
+
+        font-family: 'Dosis', sans-serif;
+        letter-spacing: 2px;
+        font-size: 12px;
+        color: $gama-color;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:hover {
+          background-color: $gama-color;
+          border: 1px solid $gama-color;
+
+          color: white;
+        }
+
+        #MainButtonIcon {
+          margin-right: 10px;
+        }
+      }
     }
   }
 }
