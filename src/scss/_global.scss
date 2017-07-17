@@ -1,3 +1,53 @@
 body {
-  background-color: red;
+  background-color: $body-bg-color;
+  margin: 0;
+  padding: 0;
+}
+
+#MainContainer {
+  width: 100vw;
+  height: 100vh;
+
+  @media (min-width: 993px)
+  {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  background-image: url('../images/woman-background-2.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-position: left;
+  background-origin: content-box;
+
+  color: $main-text-color;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  #MainContent {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-family: 'Dosis', sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      margin-right: 40px;
+      color: #969696;
+    }
+  }
 }

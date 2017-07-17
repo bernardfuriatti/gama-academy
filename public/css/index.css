@@ -1,4 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900");
 body {
-  background-color: red; }
+  background-color: black;
+  margin: 0;
+  padding: 0; }
+
+#MainContainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/woman-background-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-position: left;
+  background-origin: content-box;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  @media (min-width: 993px) {
+    #MainContainer {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto; } }
+  #MainContainer #MainContent {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #MainContainer #MainContent h2 {
+      font-family: 'Dosis', sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 5px;
+      text-transform: uppercase; }
+    #MainContainer #MainContent p {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      margin-right: 40px;
+      color: #969696; }
 
 /*# sourceMappingURL=index.css.map */
