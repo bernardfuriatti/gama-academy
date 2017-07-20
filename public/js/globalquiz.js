@@ -9,12 +9,8 @@ $( document ).ready(function() {
   document.onload = function() {
       modal.style.display = "block";
   }
-  /*
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function closeModal() {
-      modal.style.display = "none";
-  }
-  */
+
+
 /*
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
@@ -50,7 +46,7 @@ $( document ).ready(function() {
           // The signed-in user info.
           var user = result.user;
 
-          var userIp = response ? response.data.ip : "NOIP";
+          //var userIp = response ? response.data.ip : "NOIP";
 
           firebase.database().ref('leads/').push({
             nome: user.providerData[0].displayName,
@@ -58,17 +54,18 @@ $( document ).ready(function() {
             foto: user.providerData[0].photoURL,
             provedor: user.providerData[0].providerId,
             data: Date(),
-            ip: userIp
+            //ip: userIp
           });
 
          // window.location="video.html";
-         closeModal();
+         document.modal.style.display = "none";
 
         })
-        .catch(function (error) {
+        /*.catch(function (error) {
           console.log(error);
           $('#ErrorMessage').text("Erro ao obter IP");
         });
+        */
     }).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -102,7 +99,7 @@ $( document ).ready(function() {
           });
 
           // window.location="video.html";
-          closeModal();
+           modal.style.display = "none";
         })
         .catch(function (error) {
           $('#ErrorMessage').text("Erro ao obter IP");
