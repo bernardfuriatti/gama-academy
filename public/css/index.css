@@ -120,6 +120,7 @@ body, html {
     #MainContainer #MainContent h2 {
         margin-bottom: 32px;
         font-size: 2.0rem;
+        line-height: 24px;
     }
 }
 
@@ -129,7 +130,7 @@ body, html {
     font-weight: 900;
     font-size: 1.0rem;
     letter-spacing: 8px;
-    line-height: 32px;
+    line-height: 24px;
     text-transform: uppercase;
     margin-bottom: 16px;
 }
