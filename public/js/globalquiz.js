@@ -57,8 +57,8 @@ $( document ).ready(function() {
             //ip: userIp
           });
 
-         // window.location="video.html";
-         document.modal.style.display = "none";
+         window.location="video.html";
+         //modal.style.display = "none";
 
         })
         /*.catch(function (error) {
