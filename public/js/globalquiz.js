@@ -57,7 +57,7 @@ $( document ).ready(function() {
             //ip: userIp
           });
 
-         window.location="video.html";
+         window.location="quizModalFechado.html";
          //modal.style.display = "none";
 
         })
