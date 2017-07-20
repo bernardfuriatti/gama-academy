@@ -90,7 +90,7 @@ body, html {
 #MainContainer #MainDarkOverlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 993px) {
     #MainContainer #MainDarkOverlay {
@@ -127,11 +127,11 @@ body, html {
     color: #FFFFFF;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     letter-spacing: 8px;
-    line-height: 0;
+    line-height: 32px;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 #MainContainer #MainContent p {
     font-size: 1.0rem;
