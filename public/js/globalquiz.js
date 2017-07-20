@@ -10,16 +10,17 @@ $( document ).ready(function() {
       modal.style.display = "block";
   }
   // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
+  span.onclick = function closeModal() {
       modal.style.display = "none";
   }
+/*
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
       if (event.target == modal) {
           modal.style.display = "none";
       }
   }
-
+*/
   // Firebase
   var config = {
       apiKey: "AIzaSyA4TGH6AFTRaXQBkKyUsQ2HOt5XR-uX05Q",
@@ -58,7 +59,9 @@ $( document ).ready(function() {
             ip: userIp
           });
 
-          window.location="video.html";
+         // window.location="video.html";
+         closeModal();
+
         })
         .catch(function (error) {
           console.log(error);
@@ -96,7 +99,8 @@ $( document ).ready(function() {
             ip: userIp
           });
 
-          window.location="video.html";
+          // window.location="video.html";
+          closeModal();
         })
         .catch(function (error) {
           $('#ErrorMessage').text("Erro ao obter IP");
