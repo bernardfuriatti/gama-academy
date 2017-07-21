@@ -8,12 +8,21 @@ body, html {
     color: white;
     overflow-x: hidden;
 }
-
 .headerContainer{
     width: 90vw;
     height: 60px;
     margin-left: auto;
     margin-right: auto;
+}
+
+a {
+
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.72);
+    letter-spacing: 0;
+    text-decoration: none;
 }
 .headerContainer a {
 
@@ -50,7 +59,6 @@ ul li{
     margin-right: 40px;
     display: inline-block;
 }
-
 #SoonText {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -64,7 +72,7 @@ ul li{
     max-width: 100vw;
     height: 100vh;
     position: relative;
-    background-image: url("../images/imgTransformation1.jpg");
+    background-image: url("../images/quemSomos.jpg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
@@ -87,52 +95,13 @@ ul li{
     justify-content: flex-end;
     align-items: center;
 
-    -webkit-animation-name: colorchange;
-    animation-name: colorchange;
-
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-
-}
-
-@keyframes colorchange {
-    0% {
-        opacity: 0;
-    }
-    35% {
-        opacity: 0;
-
-    }
-    36% {
-        background-image: url("../images/imgTransformation2.jpg");
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: contain;
-        background-origin: content-box;
-    }
-    100% {
-        background-image: url("../images/imgTransformation2.jpg");
-        background-repeat: no-repeat;
-        background-position: left;
-        background-size: contain;
-        background-origin: content-box;
-    }
 }
 
 
 #MainContainer #MainDarkOverlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.72);
 }
 @media (min-width: 993px) {
     #MainContainer #MainDarkOverlay {
