@@ -54,7 +54,9 @@ $( document ).ready(function() {
             foto: user.providerData[0].photoURL,
             provedor: user.providerData[0].providerId,
             data: Date(),
-            ip: userIp
+            ip: userIp,
+            tipo: "Quiz"
+
           });
 
          window.location="quizModalFechado.html";
@@ -94,7 +96,8 @@ $( document ).ready(function() {
             foto: user.providerData[0].photoURL,
             provedor: user.providerData[0].providerId,
             data: Date(),
-            ip: userIp
+            ip: userIp,
+            tipo: "Quiz"
           });
 
           window.location="quizModalFechado.html";
